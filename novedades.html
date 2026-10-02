@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novedades - EESO 435</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    .contenedor {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a.activo {
+      text-decoration: underline;
+    }
+
+    .titulo-novedades {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .carrusel {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      animation: fade 1s ease-in-out;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .descripcion {
+      background-color: white;
+      padding: 15px;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .descripcion h3 {
+      margin-bottom: 10px;
+    }
+
+    .descripcion .fecha {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0.4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="contenedor">
+      <h1>Escuela Secundaria Dr. Luis M. Drago N°435</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="novedades.html" class="activo">NOVEDADES</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <h2 class="titulo-novedades">ÚLTIMAS NOVEDADES</h2>
+    <div class="carrusel">
+      <div class="slide">
+        <img src="./images/novedades/2 independencia.png" alt="Charla sobre Inteligencia Artificial" />
+        <div class="descripcion">
+          <h3>Día de la Independencia</h3>
+          <p>¡Feliz Día de la Independencia!.</p>
+          <span class="fecha">📅 09/07/2025</span>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="./images/novedades/3 quedate.png" alt="Quedate" />
+        <div class="descripcion">
+          <h3>Quedate: inscripciones desde el 4 de agosto</h3>
+          <p>Para más Información ingresar <a
+              href="https://campuseducativo.santafe.edu.ar/quedate-inscripcion-abierta">AQUÍ</a></p>
+          <span class="fecha">📅 04/08/2025</span>
+        </div>
+      </div>
+      <div class="slide active">
+        <img src="./images/novedades/1 mesas examenes previos.png" alt="Mesas examenes previos" />
+        <div class="descripcion">
+          <h3>Mesas de exámenes previos 2025</h3>
+          <p>Atención Estudiantes¡ Ya se encuentra abierta la inscripción a exámenes previos y para completar estudios.
+            Inscripción en Secretaría</p>
+          <span class="fecha">📅 18/08/2025</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    let index = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function mostrarSlide() {
+      slides.forEach(slide => slide.classList.remove("active"));
+      slides[index].classList.add("active");
+    }
+
+    function siguienteSlide() {
+      index = (index + 1) % slides.length;
+      mostrarSlide();
+    }
+
+    function anteriorSlide() {
+      index = (index - 1 + slides.length) % slides.length;
+      mostrarSlide();
+    }
+
+    // Carrusel automático
+    setInterval(siguienteSlide, 5000);
+
+    // Swipe táctil para móviles
+    const carrusel = document.querySelector(".carrusel");
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carrusel.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    carrusel.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+
+      if (touchEndX < touchStartX - swipeThreshold) {
+        siguienteSlide(); // swipe izquierda
+      } else if (touchEndX > touchStartX + swipeThreshold) {
+        anteriorSlide(); // swipe derecha
+      }
+    }
+
+    // Mostrar el primer slide al cargar
+    mostrarSlide();
+  </script>
+
+</body>
+
+</html>
