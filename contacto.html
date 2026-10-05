@@ -1,144 +1,224 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 
 <html>
+  <head>
+    <title>CONTACTO</title>
+    <link href="./images/logo1.png" rel="icon" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1, user-scalable=no"
+      name="viewport"
+    />
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
 
-<head>
-	<title>CONTACTO</title>
-	<link href="./images/logo1.png" rel="icon" type="image/x-icon" />
-	<meta charset="utf-8" />
-	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport" />
-	<link href="assets/css/main.css" rel="stylesheet" />
-</head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <div id="header">
+        <a href="./index.html"
+          ><img alt="Logo del sitio" id="logo" src="./images/logo.png"
+        /></a>
+        <!-- Nav -->
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="index.html">AUTORIDADES</a></li>
+            <li><a href="historia.html">HISTORIA</a></li>
+            <li><a href="./novedades.html">NOVEDADES</a></li>
+            <li><a href="galeria.html">IMÁGENES</a></li>
+            <li>
+              <a href="#">DOCENTES</a>
+              <ul>
+                <li><a href="#">HORARIOS</a></li>
+                <li><a href="#">LICENCIAS</a></li>
+                <li><a href="formularios.html">FORMULARIOS</a></li>
+                <li>
+                  <a
+                    href="https://sso.santafe.gov.ar/service-auth/login?service=https%3A%2F%2Fwww.santafe.gob.ar%2Fportalciudadano%2F"
+                    target="_blank"
+                    >PORTAL CIUDADANO</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://sso.santafe.gov.ar/service-auth/login?service=https%3A%2F%2Fwww.santafe.gob.ar%2Fmilegajo%2F"
+                    target="_blank"
+                    >MI LEGAJO</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://sso.santafe.gov.ar/service-auth/login?service=https%3A%2F%2Fsso.santafe.gov.ar%2Fservice-auth%2Foauth2.0%2FcallbackAuthorize%3Fclient_id%3Dmeduc-miescuela.sso.santafe.gov.ar.f46d3%26scope%3Dopenid%2520email%2520profile%2520base%26redirect_uri%3Dhttps%253A%252F%252Fwww.santafe.gob.ar%252Fmiescuela%26response_type%3Dcode%26client_name%3DCasOAuthClient"
+                    target="_blank"
+                    >MI ESCUELA</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">ESTUDIANTES</a>
+              <ul>
+                <li><a href="#">INSCRIPCIÓN</a></li>
+                <li><a href="./mesas.html">MESAS DE EXÁMEN</a></li>
+                <li><a href="#">HORARIOS</a></li>
+                <li><a href="#">PROGRAMAS</a></li>
+              </ul>
+            </li>
+            <li class="current"><a href="#">CONTACTO</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Main -->
+      <section class="wrapper style1">
+        <div class="container">
+          <div class="row gtr-200">
+            <div class="col-12">
+              <div id="content">
+                <!-- Content -->
+                <article>
+                  <header>
+                    <h2>Contacto</h2>
+                  </header>
+                  <p>
+                    Puede contactarse con nosotros completando el siguiente
+                    formulario o a través de nuestras redes sociales.
+                  </p>
+                  <form
+                    action="mailto:dragoescuela@gmail.com"
+                    enctype="text/plain"
+                    method="post"
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      gap: 10px;
+                      max-width: 600px;
+                    "
+                  >
+                    <input
+                      name="nombre"
+                      placeholder="Nombre completo"
+                      required=""
+                      style="padding: 10px"
+                      type="text"
+                    />
+                    <input
+                      name="email"
+                      placeholder="Correo electrónico"
+                      required=""
+                      style="padding: 10px"
+                      type="email"
+                    />
+                    <textarea
+                      name="mensaje"
+                      placeholder="Escriba su mensaje..."
+                      required=""
+                      rows="5"
+                      style="padding: 10px"
+                    ></textarea>
+                    <button
+                      style="
+                        padding: 10px;
+                        background-color: #004080;
+                        color: white;
+                        border: none;
+                      "
+                      type="submit"
+                    >
+                      Enviar mensaje
+                    </button>
+                  </form>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <div id="footer">
+        <div class="container">
+          <div class="row">
+            <section class="col-12">
+              <h3>Nuestra Ubicación</h3>
+              <div class="google-maps">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.180769700576!2d-60.645374!3d-32.9990093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7abdb825f4705%3A0x5f6636b3dc109aae!2sBuenos%20Aires%205318%2C%20S2011JEP%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1748992159406!5m2!1ses-419!2sar"
+                  width="100%"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </section>
+          </div>
+        </div>
 
-<body class="is-preload">
-	<div id="page-wrapper">
-		<!-- Header -->
-		<div id="header">
-			<a href="./index.html"><img alt="Logo del sitio" id="logo" src="./images/logo.png" /></a>
-			<!-- Nav -->
-			<nav id="nav">
-				<ul>
-					<li><a href="index.html">INICIO</a></li>
-					<li><a href="index.html">AUTORIDADES</a></li>
-					<li><a href="historia.html">HISTORIA</a></li>
-					<li><a href="./novedades.html">NOVEDADES</a></li>
-					<li><a href="galeria.html">IMÁGENES</a></li>
-					<li>
-						<a href="#">DOCENTES</a>
-						<ul>
-							<li><a href="#">HORARIOS</a></li>
-							<li><a href="#">LICENCIAS</a></li>
-							<li><a href="./formularios.html">FORMULARIOS</a></li>
-							<li><a href="https://sso.santafe.gov.ar/service-auth/login?service=https://www.santafe.gov.ar/intranetv2/login"
-									target="_blank">INTRANET</a></li>
-							<li><a href="https://sso.santafe.gov.ar/service-auth/login?service=https%3A%2F%2Fwww.santafe.gov.ar%2Fmilegajo%2F"
-									target="_blank">MI LEGAJO</a></li>
-							<li><a href="https://sso.santafe.gov.ar/service-auth/login?service=https%3A%2F%2Fwww.santafe.gov.ar%2Fgestioneducativa%2F%3FidCiudadana#"
-									target="_blank">MI ESCUELA</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">ESTUDIANTES</a>
-						<ul>
-							<li><a href="#">INSCRIPCIÓN</a></li>
-							<li><a href="./mesas.html">MESAS DE EXÁMEN</a></li>
-							<li><a href="#">HORARIOS</a></li>
-							<li><a href="#">PROGRAMAS</a></li>
-						</ul>
-					</li>
-					<li class="current"><a href="#">CONTACTO</a></li>
-				</ul>
-			</nav>
-		</div>
-		<!-- Main -->
-		<section class="wrapper style1">
-			<div class="container">
-				<div class="row gtr-200">
-					<div class="col-12">
-						<div id="content">
-							<!-- Content -->
-							<article>
-								<header>
-									<h2>Contacto</h2>
-								</header>
-								<p>Puede contactarse con nosotros completando el siguiente formulario o a través de
-									nuestras redes sociales.</p>
-								<form action="mailto:dragoescuela@gmail.com" enctype="text/plain" method="post"
-									style="display: flex; flex-direction: column; gap: 10px; max-width: 600px;">
-									<input name="nombre" placeholder="Nombre completo" required=""
-										style="padding: 10px;" type="text" />
-									<input name="email" placeholder="Correo electrónico" required=""
-										style="padding: 10px;" type="email" />
-									<textarea name="mensaje" placeholder="Escriba su mensaje..." required="" rows="5"
-										style="padding: 10px;"></textarea>
-									<button
-										style="padding: 10px; background-color: #004080; color: white; border: none;"
-										type="submit">Enviar mensaje</button>
-								</form>
-							</article>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Footer -->
-		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<section class="col-12">
-						<h3>Nuestra Ubicación</h3>
-						<div class="google-maps">
-							<iframe
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.180769700576!2d-60.645374!3d-32.9990093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7abdb825f4705%3A0x5f6636b3dc109aae!2sBuenos%20Aires%205318%2C%20S2011JEP%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1748992159406!5m2!1ses-419!2sar"
-								width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <ul class="icons">
+          <li>
+            <a
+              href="tel:+543418568395"
+              class="icon solid fa-phone"
+              target="_blank"
+              ><span class="label">Phone</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/escueladrago/"
+              class="icon brands fa-instagram"
+              target="_blank"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:dragoescuela@gmail.com"
+              class="icon solid fa-envelope"
+              target="_blank"
+              ><span class="label">Mail</span></a
+            >
+          </li>
+        </ul>
+        <br />
+        <ul class="icons">
+          <li>
+            <a
+              href="https://wa.me/5493412636471"
+              class="whatsapp-footer"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp"></i> Secretaría
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://wa.me/5493413409635"
+              class="whatsapp-footer"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp"></i> Preceptoría
+            </a>
+          </li>
+        </ul>
 
-						</div>
-					</section>
-				</div>
-			</div>
-
-			<ul class="icons">
-				<li><a href="tel:+543418568395" class="icon solid fa-phone" target="_blank"><span
-							class="label">Phone</span></a></li>
-				<li><a href="https://www.instagram.com/escueladrago/" class="icon brands fa-instagram"
-						target="_blank"><span class="label">Instagram</span></a></li>
-				<li><a href="mailto:dragoescuela@gmail.com" class="icon solid fa-envelope" target="_blank"><span
-							class="label">Mail</span></a></li>
-
-
-			</ul>
-			<br>
-			<ul class="icons">
-				<li>
-					<a href="https://wa.me/5493412636471" class="whatsapp-footer" target="_blank">
-						<i class="fab fa-whatsapp"></i> Secretaría
-					</a>
-				</li>
-				<li>
-					<a href="https://wa.me/5493413409635" class="whatsapp-footer" target="_blank">
-						<i class="fab fa-whatsapp"></i> Preceptoría
-					</a>
-				</li>
-
-			</ul>
-
-			<div class="copyright">
-				<ul class="menu">
-					<li>&copy; 2026 Escuela de Educación Secundaria Orientada Nº 435 “Dr. Luis María Drago”
-						Buenos Aires 5318 – Rosario (S2011JEP) 3418568395 / 152636471
-						. Todos los derechos reservados.</li>
-				</ul>
-			</div>
-
-		</div>
-	</div>
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.dropotron.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-</body>
-
+        <div class="copyright">
+          <ul class="menu">
+            <li>
+              &copy; 2026 Escuela de Educación Secundaria Orientada Nº 435 “Dr.
+              Luis María Drago” Buenos Aires 5318 – Rosario (S2011JEP)
+              3418568395 / 152636471 . Todos los derechos reservados.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
